@@ -14,7 +14,7 @@ import android.text.style.ClickableSpan
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-
+import java.lang.Exception
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +28,21 @@ class MainActivity : AppCompatActivity() {
         buttonLogin.setOnClickListener {
             startActivity(Intent(this@MainActivity, login::class.java))
         }
+
+        var db = DatabaseHelper(this, "turispot.db", 1)
+        try{
+            db.CheckDb();
+        }catch (e : Exception){
+            e.printStackTrace()
+        }
+
+        try{
+            db.OpenDatabase()
+        }catch (e : Exception){
+            e.printStackTrace()
+        }
+
+
         merubahTeks()
 
     }

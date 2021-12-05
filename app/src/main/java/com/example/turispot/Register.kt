@@ -93,6 +93,8 @@ class Register : AppCompatActivity() {
                             cv.put("email", email)
                             cv.put("password", pass)
                             cv.put("username",username)
+                            cv.put("exp",0)
+                            cv.put("level",1)
 
                             //Memasukkan ke db, tabel user
                             reg.insert("user", null, cv)
@@ -122,6 +124,7 @@ class Register : AppCompatActivity() {
                             vc.put("username",usernameOwner)
                             vc.put("email",emailOwner)
                             vc.put("password",passOwner)
+
 
                             //mengirim ke db
                             reg.insert("pemilik",null,vc)
