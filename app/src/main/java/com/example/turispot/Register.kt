@@ -2,6 +2,7 @@ package com.example.turispot
 
 import android.content.ContentValues
 import android.content.Intent
+import android.database.Cursor
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -96,19 +97,26 @@ class Register : AppCompatActivity() {
                             cv.put("exp",0)
                             cv.put("level",1)
 
-                            //Memasukkan ke db, tabel user
-                            reg.insert("user", null, cv)
-                            Toast.makeText(getApplicationContext(),"Selamat Pengguna Berhasil Terdaftar!",Toast.LENGTH_SHORT).show()
+                            var argsUser = listOf<String>(username, email).toTypedArray()
+                            var cursor : Cursor = reg.rawQuery("select * from user where username = ? or email = ?", argsUser)
+
+                            if(cursor.moveToNext()){
+                                Toast.makeText(getApplicationContext(),"Pengguna Sudah Tersedia!",Toast.LENGTH_SHORT).show()
+                            } else{
+                                //Memasukkan ke db, tabel user
+                                reg.insert("user", null, cv)
+                                Toast.makeText(getApplicationContext(),"Selamat Pengguna Berhasil Terdaftar!",Toast.LENGTH_SHORT).show()
 
 
-                            //mereset edittext jadi kosong
-                            textNama.setText("")
-                            textUname.setText("")
-                            textEmail.setText("")
-                            textPass.setText("")
+                                //mereset edittext jadi kosong
+                                textNama.setText("")
+                                textUname.setText("")
+                                textEmail.setText("")
+                                textPass.setText("")
 
-                            //mengembalikan ke bagian nama
-                            textNama.requestFocus()
+                                //mengembalikan ke bagian nama
+                                textNama.requestFocus()
+                            }
 
                         } else if (radio.equals("Owner")){
                             //mengambil nilai dari edittext
@@ -126,25 +134,32 @@ class Register : AppCompatActivity() {
                             vc.put("password",passOwner)
 
 
-                            //mengirim ke db
-                            reg.insert("pemilik",null,vc)
-                            Toast.makeText(getApplicationContext(),"Selamat Pemilik Berhasil terdaftar!",Toast.LENGTH_SHORT).show()
+                            var argsOwner = listOf<String>(usernameOwner, emailOwner).toTypedArray()
+                            var cursorOwner : Cursor = reg.rawQuery("select * from user where username = ? or email = ?", argsOwner)
 
-                            //mereset editext
-                            textNama.setText("")
-                            textUname.setText("")
-                            textEmail.setText("")
-                            textPass.setText("")
+                            if(cursorOwner.moveToNext()){
+                                Toast.makeText(getApplicationContext(),"Pemilik Sudah Tersedia!",Toast.LENGTH_SHORT).show()
+                            } else{
+                                //mengirim ke db
+                                reg.insert("pemilik",null,vc)
+                                Toast.makeText(getApplicationContext(),"Selamat Pemilik Berhasil terdaftar!",Toast.LENGTH_SHORT).show()
 
-                            //mengembalikan fokus ke nama
-                            textNama.requestFocus()
+                                //mereset editext
+                                textNama.setText("")
+                                textUname.setText("")
+                                textEmail.setText("")
+                                textPass.setText("")
+
+                                //mengembalikan fokus ke nama
+                                textNama.requestFocus()
+                            }
 
                         }else{
 
                             //toast jika belum memilih tipe daftar
                             Toast.makeText(getApplicationContext(),"Masukkan tipe daftar",Toast.LENGTH_SHORT).show()
                         }
-                    } else{
+                    }else{
 
                         //toast jika email belum benar (belum ada @mail.com/@gmail.com/yahoo.com
                         Toast.makeText(getApplicationContext(), "Pola Email belum benar!", Toast.LENGTH_SHORT).show()

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Turispot">
         <activity
+            android:name=".BerandaOwner"
+            android:exported="true" />
+        <activity
+            android:name=".Beranda"
+            android:exported="true" />
+        <activity
             android:name=".login"
             android:exported="true" />
         <activity

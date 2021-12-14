@@ -34,26 +34,25 @@
         />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnKeLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="550dp"
         android:backgroundTint="#326E6C"
-        android:text="@string/textLogin"
         android:fontFamily="@font/montserrat"
-        />
+        android:text="@string/textLogin" />
 
     <TextView
         android:id="@+id/textSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
-        android:text="Test"
-        android:textSize="15sp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="600dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Test"
         android:textColor="@color/white"
-        android:fontFamily="@font/montserrat"/>
+        android:textSize="15sp" />
 
 
 </RelativeLayout>

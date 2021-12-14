@@ -67,5 +67,4 @@ class DatabaseHelper(var mContext: Context, var dbName: String, version: Int) : 
     }
 
 
-
 }
