@@ -135,7 +135,7 @@ class Register : AppCompatActivity() {
 
 
                             var argsOwner = listOf<String>(usernameOwner, emailOwner).toTypedArray()
-                            var cursorOwner : Cursor = reg.rawQuery("select * from user where username = ? or email = ?", argsOwner)
+                            var cursorOwner : Cursor = reg.rawQuery("select * from pemilik where username = ? or email = ?", argsOwner)
 
                             if(cursorOwner.moveToNext()){
                                 Toast.makeText(getApplicationContext(),"Pemilik Sudah Tersedia!",Toast.LENGTH_SHORT).show()
