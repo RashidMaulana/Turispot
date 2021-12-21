@@ -5,6 +5,7 @@ import android.content.Intent
 import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+<<<<<<< HEAD
 import android.util.Log
 import android.view.View
 import android.widget.TextView
@@ -13,6 +14,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.w3c.dom.Text
 import java.lang.Exception
+=======
+import android.widget.TextView
+import org.w3c.dom.Text
+>>>>>>> 245d65006fb3ce1b217d10bd300734d2dee48d20
 
 class Beranda : AppCompatActivity() {
 
@@ -25,6 +30,7 @@ class Beranda : AppCompatActivity() {
 
 
 
+<<<<<<< HEAD
         var iduser = intent.getIntExtra("ID",0)
         var namaUser = intent.getStringExtra("namaUser")
         var emailUser = intent.getStringExtra("emailUser")
@@ -129,6 +135,29 @@ class Beranda : AppCompatActivity() {
         adapter = customadapter
 
         rvReview.adapter = adapter
+=======
+        var namaUser = intent.getStringExtra("namaUser")
+        var emailUser = intent.getStringExtra("emailUser")
+        var expUser = intent.getStringExtra("EXPUser").toString()
+        var levelUser = intent.getStringExtra("levelUser").toString()
+
+        var textViewNama = findViewById<TextView>(R.id.NamaUserHome).apply {
+            text = namaUser
+        }
+
+        var textViewEmail = findViewById<TextView>(R.id.EmailUserHome).apply {
+            text = emailUser
+        }
+
+        var textViewLevel = findViewById<TextView>(R.id.LevelUserHome).apply {
+            text = levelUser
+        }
+
+        var textViewExp = findViewById<TextView>(R.id.EXPUserHome).apply {
+            text = expUser
+        }
+
+>>>>>>> 245d65006fb3ce1b217d10bd300734d2dee48d20
 
     }
 }

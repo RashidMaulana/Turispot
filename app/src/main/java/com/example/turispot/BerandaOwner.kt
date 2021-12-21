@@ -4,11 +4,15 @@ import android.content.Intent
 import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+<<<<<<< HEAD
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import java.lang.Exception
+=======
+import android.widget.TextView
+>>>>>>> 245d65006fb3ce1b217d10bd300734d2dee48d20
 
 class BerandaOwner : AppCompatActivity() {
 
@@ -21,6 +25,7 @@ class BerandaOwner : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beranda_owner)
 
+<<<<<<< HEAD
         var db = DatabaseHelper(this, "turispot.db", 1)
         var reg = db.writableDatabase
         try {
@@ -34,18 +39,25 @@ class BerandaOwner : AppCompatActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+=======
+>>>>>>> 245d65006fb3ce1b217d10bd300734d2dee48d20
 
         var namaOwner = intent.getStringExtra("namaOwner")
         var emailOwner = intent.getStringExtra("emailOwner")
         var birthOwner = intent.getStringExtra("birthOwner")
         var alamatOwner = intent.getStringExtra("alamatOwner")
+<<<<<<< HEAD
         var IDOwner = intent.getIntExtra("IDOwner", 0)
         var usernameOwner = intent.getStringExtra("usernameOwner")
+=======
+
+>>>>>>> 245d65006fb3ce1b217d10bd300734d2dee48d20
 
         var textViewNama = findViewById<TextView>(R.id.NamaPemilikHome).apply {
             text = namaOwner
         }
 
+<<<<<<< HEAD
 
 
         var argsUser = listOf<String>(IDOwner.toString()).toTypedArray()
@@ -111,5 +123,17 @@ class BerandaOwner : AppCompatActivity() {
                 Toast.makeText(getApplicationContext(),"Belum Ada Wisata atau belum ada review!",Toast.LENGTH_SHORT).show()
             }
 
+=======
+        var textViewEmail = findViewById<TextView>(R.id.emailPemilikHome).apply {
+            text = emailOwner
+        }
+
+        var textViewTanggalLahir = findViewById<TextView>(R.id.TanggalLahirPemilikHome).apply {
+            text = birthOwner
+        }
+
+        var textViewAlamatPemilikHome = findViewById<TextView>(R.id.AlamatPemilikHome).apply {
+            text = alamatOwner
+>>>>>>> 245d65006fb3ce1b217d10bd300734d2dee48d20
         }
     }
