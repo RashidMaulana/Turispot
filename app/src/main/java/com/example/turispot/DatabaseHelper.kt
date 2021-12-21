@@ -2,6 +2,7 @@ package com.example.turispot
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteOpenHelper
 import android.database.sqlite.SQLiteDatabase
 import android.util.Log
@@ -65,6 +66,26 @@ class DatabaseHelper(var mContext: Context, var dbName: String, version: Int) : 
         val filepath = dbPath + dbName
         SQLiteDatabase.openDatabase(filepath, null, 0)
     }
+
+    fun updateName(nama : String, tanggal : String, email : String, alamat : String, id : Int){
+        var db : SQLiteDatabase  = this.writableDatabase
+        var query : String = "UPDATE pemilik SET " + "nama = '" + nama + "',tanggal_lahir = '" + tanggal + "',email = '" + email + "',alamat = '" + alamat + "' WHERE ID = " + id
+        db.execSQL(query)
+    }
+
+    fun updateNameUser(nama : String, username : String, password : String, email : String, id : Int){
+        var db : SQLiteDatabase  = this.writableDatabase
+        var query : String = "UPDATE user SET " + "nama = '" + nama + "',username = '" + username + "',email = '" + email + "',password = '" + password + "' WHERE ID = " + id
+        db.execSQL(query)
+    }
+
+    fun updateUserExp(id : Int){
+        var db : SQLiteDatabase  = this.writableDatabase
+        var query : String = "UPDATE user SET " + "exp = exp + 20 ,level = level +  1  WHERE ID = " + id
+        db.execSQL(query)
+    }
+
+
 
 
 }

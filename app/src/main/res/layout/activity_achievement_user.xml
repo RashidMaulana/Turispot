@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile_background"
+    tools:context=".AchievementUser">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="460dp"
+            android:layout_marginTop="280dp"
+            android:background="@drawable/rectangle_radius"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            app:srcCompat="@drawable/group_12639" />
+
+        <TextView
+            android:id="@+id/tvLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="298dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Achievment"
+            android:textColor="#208F5A"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-10dp"
+            android:text="John Doe"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/tvLevel"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/achievement_1" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/tvLevel"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/achievement_2" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/tvLevel"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/achievement_3" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/tvLevel"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/achievement_4" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView6"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/group_12695" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView6"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/group_12695" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView6"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/group_12695" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView6"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/group_12695" />
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>

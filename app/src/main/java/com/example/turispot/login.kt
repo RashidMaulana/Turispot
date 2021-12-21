@@ -73,60 +73,76 @@ class login : AppCompatActivity() {
                     var username : String = textLoginUname.text.toString().trim()
                     var pass: String = textLoginPass.text.toString().trim()
 
-                    var argsUser = listOf<String>(username, pass).toTypedArray()
-                    var cursor : Cursor = reg.rawQuery("select * from user where username = ? and password = ?", argsUser)
+                    var argsUser = listOf<String>(username).toTypedArray()
+                    var cursor : Cursor = reg.rawQuery("select * from user where username = ?", argsUser)
 
                     if(cursor.moveToNext()){
                         var IDUser = cursor.getInt(cursor.getColumnIndex("ID").toInt())
                         var EXPUser = cursor.getInt(cursor.getColumnIndex("exp").toInt())
                         var levelUser = cursor.getInt(cursor.getColumnIndex("level").toInt())
-
+                        var unameuserdb = cursor.getString(cursor.getColumnIndex("username").toInt())
+                        var passuserdb = cursor.getString(cursor.getColumnIndex("password").toInt())
                         var emailUser = cursor.getString(cursor.getColumnIndex("email").toInt())
                         var namaUser = cursor.getString(cursor.getColumnIndex("nama").toInt())
                         var fotoUser = cursor.getString(cursor.getColumnIndex("foto").toInt())
 
-                        val intent = Intent(this, Beranda::class.java ).apply {
-                            putExtra("ID",IDUser)
-                            putExtra("EXPUser",EXPUser)
-                            putExtra("levelUser",levelUser)
-                            putExtra("emailUser",emailUser)
-                            putExtra("namaUser",namaUser)
-                            putExtra("fotoUser",fotoUser)
+
+                        if (username != unameuserdb || pass != passuserdb){
+                            Toast.makeText(getApplicationContext(), "Username atau password salah!", Toast.LENGTH_SHORT).show()
+
+                        }else{
+                            val intentlogin = Intent(this, Beranda::class.java ).apply {
+                                putExtra("ID", IDUser)
+                                putExtra("EXPUser", EXPUser)
+                                putExtra("levelUser", levelUser)
+                                putExtra("emailUser", emailUser)
+                                putExtra("namaUser", namaUser)
+                                putExtra("fotoUser", fotoUser)
+                            }
+                            Toast.makeText(getApplicationContext(), "Berhasil Login!", Toast.LENGTH_SHORT).show()
+                            startActivity(intentlogin)
+
                         }
-                        Toast.makeText(getApplicationContext(),"Berhasil Login!",Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
-                    } else{
-                        Toast.makeText(getApplicationContext(),"Username Atau Password Salah!",Toast.LENGTH_SHORT).show()
+
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Akun pengguna tidak ditemukan!",Toast.LENGTH_SHORT).show()
                     }
 
                 } else if (radio.equals("Owner")){
                     var usernameOwner : String = textLoginUname.text.toString().trim()
                     var passOwner: String = textLoginPass.text.toString().trim()
 
-                    var argsOwner = listOf<String>(usernameOwner, passOwner).toTypedArray()
-                    var cursorOwner : Cursor = reg.rawQuery("select * from pemilik where username = ? and password = ?", argsOwner)
+                    var argsOwner = listOf<String>(usernameOwner).toTypedArray()
+                    var cursorOwner : Cursor = reg.rawQuery("select * from pemilik where username = ?", argsOwner)
 
                     if(cursorOwner.moveToNext()){
                         var IDOwner = cursorOwner.getInt(cursorOwner.getColumnIndex("ID").toInt())
 
                         var alamatOwner = cursorOwner.getString(cursorOwner.getColumnIndex("alamat").toInt())
+                        var userownerdb = cursorOwner.getString(cursorOwner.getColumnIndex("username").toInt())
+                        var passownerdb = cursorOwner.getString(cursorOwner.getColumnIndex("password").toInt())
                         var emailOwner = cursorOwner.getString(cursorOwner.getColumnIndex("email").toInt())
                         var birthOwner = cursorOwner.getString(cursorOwner.getColumnIndex("tanggal_lahir").toInt())
                         var namaOwner = cursorOwner.getString(cursorOwner.getColumnIndex("nama").toInt())
                         var fotoOwner = cursorOwner.getString(cursorOwner.getColumnIndex("foto").toInt())
 
-                        val intent = Intent(this, BerandaOwner::class.java ).apply {
-                            putExtra("IDOwner",IDOwner)
-                            putExtra("emailOwner",emailOwner)
-                            putExtra("birthOwner",birthOwner)
-                            putExtra("alamatOwner",alamatOwner)
-                            putExtra("namaOwner",namaOwner)
-                            putExtra("fotoOwner",fotoOwner)
+                        if(userownerdb != usernameOwner || passOwner != passownerdb){
+                            Toast.makeText(getApplicationContext(),"Username atau password Salah!",Toast.LENGTH_SHORT).show()
+                        }else{
+                            val intent = Intent(this, BerandaOwner::class.java ).apply {
+                                putExtra("IDOwner",IDOwner)
+                                putExtra("UsernameOwner", usernameOwner)
+                                putExtra("emailOwner",emailOwner)
+                                putExtra("birthOwner",birthOwner)
+                                putExtra("alamatOwner",alamatOwner)
+                                putExtra("namaOwner",namaOwner)
+                                putExtra("fotoOwner",fotoOwner)
+                            }
+                            Toast.makeText(getApplicationContext(),"Berhasil Login!",Toast.LENGTH_SHORT).show()
+                            startActivity(intent)
                         }
-                        Toast.makeText(getApplicationContext(),"Berhasil Login!",Toast.LENGTH_SHORT).show()
-                        startActivity(intent)
-                    } else{
-                        Toast.makeText(getApplicationContext(),"Username Atau Password Salah!",Toast.LENGTH_SHORT).show()
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Akun pemilik tidak ditemukan!",Toast.LENGTH_SHORT).show()
                     }
 
                 }else{

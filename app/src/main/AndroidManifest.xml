@@ -10,6 +10,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Turispot">
         <activity
+            android:name=".EditUser"
+            android:exported="false" />
+        <activity
+            android:name=".KategoriMakanan"
+            android:exported="false" />
+        <activity
+            android:name=".KategoriAlam"
+            android:exported="false" />
+        <activity
+            android:name=".KategoriBudaya"
+            android:exported="false" />
+        <activity
+            android:name=".KategoriSejarah"
+            android:exported="false" />
+        <activity
+            android:name=".DetailWisata"
+            android:exported="false" />
+        <activity
+            android:name=".ProfielOwner3"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewOwner2"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileOwner2"
+            android:exported="false" />
+        <activity
+            android:name=".AchievementUser"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileUser"
+            android:exported="true" />
+        <activity
             android:name=".BerandaOwner"
             android:exported="true" />
         <activity

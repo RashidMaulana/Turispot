@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile_background"
+    tools:context=".ProfileUser">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/poppins"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="460dp"
+            android:layout_marginTop="280dp"
+            android:background="@drawable/rectangle_radius"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="400dp"
+            android:background="@drawable/rectangle"
+            android:text=""
+
+
+            />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            app:srcCompat="@drawable/group_12639" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="228dp"
+            android:layout_marginTop="200dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/group_62"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/tvLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="298dp"
+            android:fontFamily="@font/poppins"
+            android:text="Level"
+            android:textColor="#208F5A"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/pgLevelBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLevel"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:minHeight="48dp"
+            android:scaleY="4"
+            android:text="Name"
+            android:textColor="#208F5A" />
+
+        <TextView
+            android:id="@+id/tvLevelUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pgLevelBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:text="Level 4"
+            android:textColor="#009688"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="440dp"
+            android:fontFamily="@font/poppins"
+            android:text="Recent Achievement"
+            android:textColor="#208F5A"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="292dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white"
+            android:onClick="PindahEditUser"
+            android:text="Edit"
+            android:textColor="#208F5A" />
+
+        <TextView
+            android:id="@+id/tvNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView5"
+            android:layout_centerHorizontal="true"
+            android:text="TextView"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/textView22"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/achievement_1" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/textView22"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/achievement_2" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/textView22"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/achievement_3" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/textView22"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/achievement_4" />
+
+        <Button
+            android:id="@+id/bAchievementMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="435dp"
+            android:layout_toEndOf="@id/textView22"
+            android:backgroundTint="#00DF3333"
+            android:onClick="PindahAchievementUser"
+            android:text="More"
+            android:textColor="#2196F3" />
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>
