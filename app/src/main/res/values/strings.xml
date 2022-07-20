@@ -1,17 +1,5 @@
 <resources>
-    <string name="app_name">Turispot</string>
-    <string name="textJudul">\t Temukan Destinasi \n \t Wisata Baru!</string>
-    <string name="textPromosi">\t Eksplorasi destinasi wisata baru \n \t untuk perjalanan wisata rekreasi \n \t anda!</string>
-    <string name="textLogin">Login</string>
+    <string name="app_name">Expo</string>
     <string name="tamansari">tamanSari</string>
     <string name="spot_photo">Spot Photo</string>
-    <string name="tMaukemana">Mau Pergi \n \t Kemana hari ini ?</string>
-    <string name="tBudaya">Budaya</string>
-    <string name="tMakanan">Makanan</string>
-    <string name="tAlam">Alam</string>
-    <string name="tSejarah">Sejarah</string>
-    <string name="tKatagori">Kategori</string>
-    <string name="tPopuler">Populer</string>
-    <string name="tTerdekat">Wisata Terdekat</string>
-
 </resources>
