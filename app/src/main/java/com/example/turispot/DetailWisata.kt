@@ -24,6 +24,7 @@ class DetailWisata : AppCompatActivity() {
         var alamatwisata = intent.getStringExtra("tvAlamat")
         var hargawisata = intent.getStringExtra("tvHarga")
         var kategoriwisata = intent.getStringExtra("tvKategori")
+        var detailwisata = intent.getStringExtra("deskripsi")
 
         var db = DatabaseHelper(this, "turispot.db", 1)
         var reg = db.writableDatabase
@@ -43,14 +44,17 @@ class DetailWisata : AppCompatActivity() {
         var txkategori = findViewById<TextView>(R.id.txIsiKategori)
         var txalamat = findViewById<TextView>(R.id.txAlamat)
         var txcost = findViewById<TextView>(R.id.txCost)
+        var txdeskripsi = findViewById<TextView>(R.id.txIsiDeskripsi)
 
         var etRating = findViewById<EditText>(R.id.etRating)
         var etUlasan = findViewById<EditText>(R.id.etUlasan)
+
 
         txnama.text = namawisata
         txkategori.text = kategoriwisata
         txalamat.text = alamatwisata
         txcost.text = hargawisata
+        txdeskripsi.text = detailwisata
 
 
 
@@ -99,8 +103,23 @@ class DetailWisata : AppCompatActivity() {
                       cvachievement.put("tanggal",currentDate)
 
                       reg.insert("achievement", null, cvachievement)
-
                       db.updateUserExp(iduser)
+
+                      var argsUserlevel = listOf<String>(iduser.toString()).toTypedArray()
+                      var cursor3 : Cursor = reg.rawQuery("select * from user where ID = ?", argsUserlevel)
+                      if(cursor3.moveToNext()){
+                          var expuserdb = cursor3.getInt(cursor3.getColumnIndex("exp").toInt())
+                          var leveluserdb = cursor3.getString(cursor3.getColumnIndex("level").toInt())
+
+
+                          if(expuserdb > 99){
+                              db.updateUserLevel(iduser)
+                              Toast.makeText(getApplicationContext(),"naik level",Toast.LENGTH_SHORT).show()
+                          }
+                          else if(expuserdb <= 99){
+                              Toast.makeText(getApplicationContext(),"exp bertambah",Toast.LENGTH_SHORT).show()
+                          }
+                      }
 
 
 

@@ -79,9 +79,21 @@ class DatabaseHelper(var mContext: Context, var dbName: String, version: Int) : 
         db.execSQL(query)
     }
 
+    fun updateNameWisata(nama : String, deskripsi : String, alamat : String, harga : Int,kategori : Int, id : Int){
+        var db : SQLiteDatabase  = this.writableDatabase
+        var query : String = "UPDATE wisata SET " + "nama = '" + nama + "',deskripsi = '" + deskripsi + "',alamat = '" + alamat + "',harga = '" + harga + "',kategori ='" + kategori + "' WHERE ID = " + id
+        db.execSQL(query)
+    }
+
     fun updateUserExp(id : Int){
         var db : SQLiteDatabase  = this.writableDatabase
-        var query : String = "UPDATE user SET " + "exp = exp + 20 ,level = level +  1  WHERE ID = " + id
+        var query : String = "UPDATE user SET " + "exp = exp + 20 WHERE ID = " + id
+        db.execSQL(query)
+    }
+
+    fun updateUserLevel(id : Int){
+        var db : SQLiteDatabase  = this.writableDatabase
+        var query : String = "UPDATE user SET " + "exp = exp - 100 ,level = level + 1 WHERE ID = " + id
         db.execSQL(query)
     }
 

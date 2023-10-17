@@ -1,5 +1,24 @@
 <resources>
-    <string name="app_name">Expo</string>
+    <string name="app_name">Turispot</string>
+    <string name="textJudul">\t Temukan Destinasi \n \t Wisata Baru!</string>
+    <string name="textPromosi">\t Eksplorasi destinasi wisata baru \n \t untuk perjalanan wisata rekreasi \n \t anda!</string>
+    <string name="textLogin">Login</string>
     <string name="tamansari">tamanSari</string>
     <string name="spot_photo">Spot Photo</string>
+    <string name="tMaukemana">Mau Pergi \n \t Kemana hari ini ?</string>
+    <string name="tBudaya">Budaya</string>
+    <string name="tMakanan">Makanan</string>
+    <string name="tAlam">Alam</string>
+    <string name="tSejarah">Sejarah</string>
+    <string name="tKatagori">Kategori</string>
+    <string name="tPopuler">Populer</string>
+    <string name="tTerdekat">Wisata Terdekat</string>
+    <string name="lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting_industry_lorem_ipsum_has_been_the_industry_s_standard_dummy_text_ever_since_the_1500s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s</string>
+    <string name="todo">TODO</string>
+    <string name="highlight">Highlight</string>
+    <string name="galeri">Galeri</string>
+    <string name="simpan">Simpan</string>
+    <string name="lorem_ipsum_simply_dummy_text_of_the_printing_and_typesetting_industry_lorem_ipsum_has_been_the_industry_s_standard_dummy_text_ever_since_the_1500s">Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s</string>
+    <string name="deskripsi">Deskripsi</string>
+
 </resources>

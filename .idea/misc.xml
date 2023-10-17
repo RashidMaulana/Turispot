@@ -3,13 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
+        <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/drawable/rectangle.xml" value="0.2703125" />
+        <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/drawable/rectangle_bordered.xml" value="0.2703125" />
+        <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/drawable/rectangle_radius.xml" value="0.2703125" />
         <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/layout/activity_achievement_user.xml" value="0.2504528985507246" />
         <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/layout/activity_beranda.xml" value="0.264" />
         <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/layout/activity_beranda_owner.xml" value="0.264" />
         <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/layout/activity_detail_wisata.xml" value="0.264" />
         <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/layout/activity_edit_user.xml" value="0.264" />
-        <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/layout/activity_edit_wisata.xml" value="0.264" />
+        <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/layout/activity_edit_wisata.xml" value="0.20577617328519857" />
         <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/layout/activity_kategori_alam.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/layout/activity_kategori_budaya.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/layout/activity_kategori_makanan.xml" value="0.22826086956521738" />
@@ -26,14 +28,7 @@
         <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/layout/card_wisata.xml" value="0.4" />
         <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/layout/carxd.xml" value="0.213768115942029" />
         <entry key="..\:/Users/My Asus/AndroidStudioProjects/Turispot/app/src/main/res/layout/review_card.xml" value="0.4" />
-=======
-        <entry key="..\:/Android_projects/Turispot/app/src/main/res/drawable/roundededittext.xml" value="0.3828125" />
-        <entry key="..\:/Android_projects/Turispot/app/src/main/res/layout/activity_beranda.xml" value="0.2717391304347826" />
-        <entry key="..\:/Android_projects/Turispot/app/src/main/res/layout/activity_beranda_owner.xml" value="0.25" />
-        <entry key="..\:/Android_projects/Turispot/app/src/main/res/layout/activity_login.xml" value="0.20520833333333333" />
-        <entry key="..\:/Android_projects/Turispot/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
-        <entry key="..\:/Android_projects/Turispot/app/src/main/res/layout/activity_register.xml" value="0.25" />
->>>>>>> 245d65006fb3ce1b217d10bd300734d2dee48d20
+        <entry key="..\:/Users/rashi/Downloads/Compressed/Turispot/app/src/main/res/layout/activity_beranda.xml" value="0.1859375" />
       </map>
     </option>
   </component>

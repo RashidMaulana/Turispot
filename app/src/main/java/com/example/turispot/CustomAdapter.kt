@@ -29,6 +29,7 @@ class CustomAdapter internal constructor(
         holder.tvRatingReview.text = ratinguser[position].toString()
         holder.tvTanggalReview.text = tanggalreview[position]
         holder.tvKontenReview.text = kontenuser[position]
+        holder.image.setImageResource(R.drawable.avatar)
 
     }
 

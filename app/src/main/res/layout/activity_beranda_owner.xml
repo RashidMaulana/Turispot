@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".BerandaOwner">
 
-<<<<<<< HEAD
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,15 +16,10 @@
 
     <ImageView
         android:id="@+id/imageView2"
-=======
-    <TextView
-        android:id="@+id/NamaPemilikHome"
->>>>>>> 245d65006fb3ce1b217d10bd300734d2dee48d20
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-<<<<<<< HEAD
         android:scaleX="0.8"
         android:scaleY="0.8"
         app:srcCompat="@drawable/katulumpa_1__1_" />
@@ -77,7 +71,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:background="#FFFFFF"
-        android:onClick="profileOwner"
+        android:onClick="pindahProfileOwner"
         app:srcCompat="@drawable/group_12639__1_"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -153,14 +147,13 @@
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/EditWisata"
+        android:id="@+id/editWisataBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="280dp"
         android:layout_marginTop="400dp"
         android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="pindahProfileOwner"
         android:text="Edit"
         android:textColor="#208F5A" />
 
@@ -227,38 +220,4 @@
         android:textColor="@color/white"
         android:textStyle="bold" />
 
-=======
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/emailPemilikHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/TanggalLahirPemilikHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"/>
-
-    <TextView
-        android:id="@+id/AlamatPemilikHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/textViewBeranda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Halaman Beranda Owner"
-         />
->>>>>>> 245d65006fb3ce1b217d10bd300734d2dee48d20
 </RelativeLayout>

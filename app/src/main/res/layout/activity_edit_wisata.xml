@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".EditWisata">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
     <ImageView
         android:id="@+id/imageView3"
@@ -14,19 +19,21 @@ tools:context=".EditWisata">
         android:layout_marginTop="-20dp"
         android:scaleX="1"
         android:scaleY="0.8"
-        app:srcCompat="@drawable/rectangle_2662" />
+        app:srcCompat="@drawable/rectangle_2662"
+        android:contentDescription="@string/todo" />
 
-    <ImageButton
-        android:id="@+id/imageButton6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="22dp"
-        android:background="#00FFFFFF"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        app:srcCompat="@drawable/group_12694"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="22dp"
+            android:background="#00FFFFFF"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:onClick="fBack"
+            app:srcCompat="@drawable/group_12694"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView25"
@@ -62,93 +69,161 @@ tools:context=".EditWisata">
         android:textSize="22sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="372dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="Nama Wisata"
-        android:textColor="@color/black"
-        android:textSize="22sp" />
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="372dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Nama Wisata"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="402dp"
-        android:ems="10"
-        android:fontFamily="@font/montserrat"
-        android:inputType="textPersonName"
-        android:text="Nama Wisata"
-        android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="402dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:inputType="textPersonName"
+            android:text="Nama Wisata"
+            android:textColor="@color/black"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
-    <TextView
-        android:id="@+id/textView28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="452dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="Deskripsi"
-        android:textColor="@color/black"
-        android:textSize="22sp" />
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="452dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/deskripsi"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="320dp"
-        android:layout_height="68dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="482dp"
-        android:ems="10"
-        android:fontFamily="@font/montserrat"
-        android:inputType="textMultiLine"
-        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-        android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/etDeskripsi"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="482dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:inputType="textMultiLine"
+            android:text="@string/lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting_industry_lorem_ipsum_has_been_the_industry_s_standard_dummy_text_ever_since_the_1500s"
+            android:textColor="@color/black"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="552dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="Highlight"
-        android:textColor="@color/black"
-        android:textSize="22sp" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioGroup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#208F5A"
+            android:text="@string/simpan"
+            tools:ignore="TextContrastCheck" />
 
-    <EditText
-        android:id="@+id/etUlasan"
-        android:layout_width="320dp"
-        android:layout_height="68dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="582dp"
-        android:ems="10"
-        android:fontFamily="@font/montserrat"
-        android:inputType="textMultiLine"
-        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-        android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/tvHarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etDeskripsi"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Harga"
+            android:textColor="@color/black"
+            android:textSize="22sp"/>
 
-    <TextView
-        android:id="@+id/textView30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="652dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="Galeri"
-        android:textColor="@color/black"
-        android:textSize="22sp" />
+        <EditText
+            android:id="@+id/etHarga"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvHarga"
+            android:layout_marginLeft="40dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:inputType="number"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="680dp"
-        android:backgroundTint="#208F5A"
-        android:text="Simpan" />
+        <TextView
+            android:id="@+id/tvAlamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etHarga"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Alamat"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/etAlamat"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAlamat"
+            android:layout_marginLeft="40dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:inputType="textMultiLine"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/tvKategori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etAlamat"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Kategori"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvKategori"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioAlam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Alam"
+                android:textColor="@color/black"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/radioBudaya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Budaya"
+                android:textColor="@color/black"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/radioMakanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Makanan"
+                android:textColor="@color/black"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/radioSejarah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Sejarah"
+                android:textColor="@color/black"></RadioButton>
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</ScrollView>

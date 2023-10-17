@@ -134,6 +134,11 @@ class Register : AppCompatActivity() {
                             vc.put("password",passOwner)
 
 
+
+
+
+
+
                             var argsOwner = listOf<String>(usernameOwner, emailOwner).toTypedArray()
                             var cursorOwner : Cursor = reg.rawQuery("select * from pemilik where username = ? or email = ?", argsOwner)
 
@@ -143,6 +148,29 @@ class Register : AppCompatActivity() {
                                 //mengirim ke db
                                 reg.insert("pemilik",null,vc)
                                 Toast.makeText(getApplicationContext(),"Selamat Pemilik Berhasil terdaftar!",Toast.LENGTH_SHORT).show()
+
+                                //query select ID yang baru diregister
+                                var argsOwner = listOf<String>(usernameOwner, emailOwner).toTypedArray()
+                                var cursorOwner : Cursor = reg.rawQuery("select * from pemilik where username = ? or email = ?", argsOwner)
+
+                                if(cursorOwner.moveToNext()){
+                                    var idownerdb = cursorOwner.getString(cursorOwner.getColumnIndex("ID").toInt())
+
+                                    //create wisata buat owner yang baru
+                                    var vcw = ContentValues()
+                                    vcw.put("nama", "-")
+                                    vcw.put("alamat", "-")
+                                    vcw.put("harga", 0)
+                                    vcw.put("foto", "-")
+                                    vcw.put("deskripsi", "-")
+                                    vcw.put("kategori", 1)
+                                    vcw.put("id_pemilik", idownerdb)
+
+                                    reg.insert("wisata",null,vcw)
+
+                                    }else{
+                                    Toast.makeText(getApplicationContext(),"Gagal membuat wisata!",Toast.LENGTH_SHORT).show()
+                                }
 
                                 //mereset editext
                                 textNama.setText("")

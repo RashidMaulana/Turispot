@@ -53,16 +53,6 @@
             android:scaleY="0.8"
             app:srcCompat="@drawable/group_12639" />
 
-        <ImageButton
-            android:id="@+id/imageButton7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="228dp"
-            android:layout_marginTop="200dp"
-            android:background="#00FFFFFF"
-            app:srcCompat="@drawable/group_62"
-            tools:ignore="SpeakableTextPresentCheck" />
-
         <TextView
             android:id="@+id/tvLevel"
             android:layout_width="wrap_content"
@@ -178,7 +168,7 @@
             android:backgroundTint="#00DF3333"
             android:onClick="PindahAchievementUser"
             android:text="More"
-            android:textColor="#2196F3" />
+            android:textColor="#208F5A" />
 
     </RelativeLayout>
 

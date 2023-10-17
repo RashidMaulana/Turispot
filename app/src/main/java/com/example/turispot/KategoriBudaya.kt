@@ -24,4 +24,9 @@ class KategoriBudaya : AppCompatActivity() {
         val toSejarah = Intent(this,KategoriSejarah::class.java)
         startActivity(toSejarah)
     }
+
+    fun fBack(view: View) {
+        val toBeranda = Intent(this,Beranda::class.java)
+        startActivity(toBeranda)
+    }
 }

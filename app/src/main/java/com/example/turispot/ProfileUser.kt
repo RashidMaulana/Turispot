@@ -58,7 +58,7 @@ class ProfileUser : AppCompatActivity() {
                 text = NamaUserdb
             }
             var textlvluser = findViewById<TextView>(R.id.tvLevelUser).apply {
-                text = LevelUserdb.toString()
+                text = "Level " + LevelUserdb.toString()
             }
             var pgexpbar = findViewById<ProgressBar>(R.id.pgLevelBar).apply {
                 progress = ExpUserdb
@@ -67,9 +67,6 @@ class ProfileUser : AppCompatActivity() {
         }else{
             Toast.makeText(getApplicationContext(),"Anda belum login", Toast.LENGTH_SHORT).show()
         }
-
-
-
 
     }
 

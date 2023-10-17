@@ -5,7 +5,6 @@ import android.content.Intent
 import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-<<<<<<< HEAD
 import android.util.Log
 import android.view.View
 import android.widget.TextView
@@ -14,10 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.w3c.dom.Text
 import java.lang.Exception
-=======
-import android.widget.TextView
-import org.w3c.dom.Text
->>>>>>> 245d65006fb3ce1b217d10bd300734d2dee48d20
 
 class Beranda : AppCompatActivity() {
 
@@ -30,7 +25,6 @@ class Beranda : AppCompatActivity() {
 
 
 
-<<<<<<< HEAD
         var iduser = intent.getIntExtra("ID",0)
         var namaUser = intent.getStringExtra("namaUser")
         var emailUser = intent.getStringExtra("emailUser")
@@ -56,26 +50,34 @@ class Beranda : AppCompatActivity() {
     }
 
     fun fpindahmakan(view: View) {
-        val intKeMakan = Intent(this, KategoriMakanan::class.java)
+        val intKeMakan = Intent(this, KategoriMakanan::class.java).apply {
+            putExtra("Kategori",3)
+        }
         startActivity(intKeMakan)
 
 
     }
     fun fpindahbudaya(view: View) {
-        val intKeBudaya = Intent(this, KategoriBudaya::class.java)
+        val intKeBudaya = Intent(this, KategoriBudaya::class.java).apply {
+            putExtra("Kategori",2)
+        }
         startActivity(intKeBudaya)
 
 
     }
 
     fun fpindahsejarah(view: View) {
-        val intKeSejarah = Intent(this, KategoriSejarah::class.java)
+        val intKeSejarah = Intent(this, KategoriSejarah::class.java).apply {
+            putExtra("Kategori",4)
+        }
         startActivity(intKeSejarah)
 
 
     }
     fun fpindahalam(view: View) {
-        val intKeAlam = Intent(this, KategoriAlam::class.java)
+        val intKeAlam = Intent(this, KategoriAlam::class.java).apply {
+            putExtra("Kategori",1)
+        }
         startActivity(intKeAlam)
 
 
@@ -104,13 +106,15 @@ class Beranda : AppCompatActivity() {
         var hargawisata = ArrayList<String>()
         var alamatwisata = ArrayList<String>()
         var kategoriwisata = ArrayList<String>()
+        var deskripsiwisata = ArrayList<String>()
+
 
         var userid = userid
 
         var db = DatabaseHelper(this, "turispot.db", 1)
         var reg = db.writableDatabase
         var cursor : Cursor = reg.rawQuery(
-            "SELECT w.nama AS wisata, w.harga AS harga, w.alamat AS alamat, k.nama AS kategori  FROM wisata w INNER JOIN kategori k ON w.kategori = k.ID ",null
+            "SELECT w.nama AS wisata, w.harga AS harga, w.alamat AS alamat, k.nama AS kategori , w.deskripsi AS deskripsi FROM wisata w INNER JOIN kategori k ON w.kategori = k.ID ",null
         )
         if(cursor.count == 0){
             Toast.makeText(getApplicationContext(),"Data Wisata tidak ada", Toast.LENGTH_SHORT).show()
@@ -122,11 +126,12 @@ class Beranda : AppCompatActivity() {
                 hargawisata.add(cursor.getString(cursor.getColumnIndex("harga").toInt()))
                 alamatwisata.add(cursor.getString(cursor.getColumnIndex("alamat").toInt()))
                 kategoriwisata.add(cursor.getString(cursor.getColumnIndex("kategori").toInt()))
+                deskripsiwisata.add(cursor.getString(cursor.getColumnIndex("deskripsi").toInt()))
                 Log.d(ContentValues.TAG,"Cursor " + namawisata + hargawisata + alamatwisata + kategoriwisata)
             }
             Toast.makeText(getApplicationContext(),"Data review ada", Toast.LENGTH_SHORT).show()
         }
-        var customadapter = AdapterWisata(this,namawisata, alamatwisata, hargawisata,kategoriwisata,userid)
+        var customadapter = AdapterWisata(this,namawisata, alamatwisata, hargawisata,kategoriwisata,deskripsiwisata,userid)
 
         var rvReview = findViewById<RecyclerView>(R.id.rvWisata)
         layoutmanager = LinearLayoutManager(this)
@@ -135,29 +140,6 @@ class Beranda : AppCompatActivity() {
         adapter = customadapter
 
         rvReview.adapter = adapter
-=======
-        var namaUser = intent.getStringExtra("namaUser")
-        var emailUser = intent.getStringExtra("emailUser")
-        var expUser = intent.getStringExtra("EXPUser").toString()
-        var levelUser = intent.getStringExtra("levelUser").toString()
-
-        var textViewNama = findViewById<TextView>(R.id.NamaUserHome).apply {
-            text = namaUser
-        }
-
-        var textViewEmail = findViewById<TextView>(R.id.EmailUserHome).apply {
-            text = emailUser
-        }
-
-        var textViewLevel = findViewById<TextView>(R.id.LevelUserHome).apply {
-            text = levelUser
-        }
-
-        var textViewExp = findViewById<TextView>(R.id.EXPUserHome).apply {
-            text = expUser
-        }
-
->>>>>>> 245d65006fb3ce1b217d10bd300734d2dee48d20
 
     }
 }

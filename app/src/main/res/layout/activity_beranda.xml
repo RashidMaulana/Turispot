@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-=======
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> 245d65006fb3ce1b217d10bd300734d2dee48d20
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Beranda">
 
-<<<<<<< HEAD
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,36 +16,42 @@
             android:id="@+id/tMaukemana"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tMaukemana"
+            android:layout_marginTop="20sp"
+            android:fontFamily="@font/montserrat"
+            android:text="Mau Pergi"
+            android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.057"
+            app:layout_constraintHorizontal_bias="0.065"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/kBudaya"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
             android:onClick="fpindahbudaya"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.387"
+            app:layout_constraintHorizontal_bias="0.365"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tKatagori"
-            app:srcCompat="@drawable/budaya"
+            app:srcCompat="@drawable/wat_phra_kaew"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageView
             android:id="@+id/kMakanan"
-            android:layout_width="109dp"
-            android:layout_height="86dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
             android:onClick="fpindahmakan"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintHorizontal_bias="0.06"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tKatagori"
-            app:srcCompat="@drawable/makan"
+            app:layout_goneMarginTop="0dp"
+            app:srcCompat="@drawable/finger_food"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -62,10 +63,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.393"
+            app:layout_constraintHorizontal_bias="0.366"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/kBudaya"
-            app:layout_constraintVertical_bias="0.053" />
+            app:layout_constraintVertical_bias="0.036" />
 
         <TextView
             android:id="@+id/tMakanan"
@@ -78,10 +79,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintHorizontal_bias="0.09"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/kMakanan"
-            app:layout_constraintVertical_bias="0.015" />
+            app:layout_constraintVertical_bias="0.036" />
 
         <TextView
             android:id="@+id/tAlam"
@@ -99,14 +100,15 @@
 
         <ImageView
             android:id="@+id/kAlam"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
             android:onClick="fpindahalam"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.67"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toEndOf="@+id/kBudaya"
             app:layout_constraintTop_toBottomOf="@+id/tKatagori"
-            app:srcCompat="@drawable/alam"
+            app:srcCompat="@drawable/group_12696"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -125,20 +127,22 @@
 
         <ImageView
             android:id="@+id/kSejarah"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
             android:onClick="fpindahsejarah"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.949"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintStart_toEndOf="@+id/kAlam"
             app:layout_constraintTop_toBottomOf="@+id/tKatagori"
-            app:srcCompat="@drawable/sejarah"
+            app:srcCompat="@drawable/group_12697"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/tKatagori"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="@string/tKatagori"
             android:textAlignment="textStart"
             android:textSize="24sp"
@@ -146,7 +150,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.062"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tMaukemana" />
+            app:layout_constraintTop_toBottomOf="@id/textView16" />
 
         <TextView
             android:id="@+id/textView"
@@ -174,12 +178,26 @@
             android:id="@+id/bProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="16dp"
             android:onClick="PindahProfile"
             android:text="Profile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text=" Kemana hari ini"
+            android:textColor="#208F5A"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.108"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tMaukemana" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -188,48 +206,3 @@
 
 
 </ScrollView>
-=======
-    <TextView
-        android:id="@+id/NamaUserHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"
-         />
-
-    <TextView
-        android:id="@+id/EmailUserHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-         />
-
-    <TextView
-        android:id="@+id/LevelUserHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_marginTop="300dp"
-        android:layout_centerHorizontal="true"
-         />
-
-    <TextView
-        android:id="@+id/EXPUserHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
-         />
-
-    <TextView
-        android:id="@+id/HalamanBerandaUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Halaman Beranda user"
-         />
-</RelativeLayout>
->>>>>>> 245d65006fb3ce1b217d10bd300734d2dee48d20

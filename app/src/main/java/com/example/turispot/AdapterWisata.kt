@@ -20,9 +20,8 @@ class AdapterWisata internal constructor(
     private val alamatwisata: ArrayList<String>,
     private val hargawisata: ArrayList<String>,
     private val kategoriwisata: ArrayList<String>,
+    private val deskripsiwisata: ArrayList<String>,
     private val iduser: Int
-
-
     ) : RecyclerView.Adapter<MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val inflater = LayoutInflater.from(context)
@@ -41,7 +40,7 @@ class AdapterWisata internal constructor(
         var tvAlamat: TextView
         var tvHarga: TextView
         var tvKategori: TextView
-        var image : ImageView = itemView.findViewById(R.id.imageView16)
+        var image : ImageView
 
 
         init {
@@ -49,6 +48,7 @@ class AdapterWisata internal constructor(
             tvAlamat = itemView.findViewById(R.id.tvAlamatWisata)
             tvHarga = itemView.findViewById(R.id.tvHargaWisata)
             tvKategori = itemView.findViewById(R.id.tvKategori)
+            image = itemView.findViewById(R.id.imageView16)
 
 
 
@@ -64,6 +64,7 @@ class AdapterWisata internal constructor(
         holder.tvAlamat.text = alamatwisata[position].toString()
         holder.tvHarga.text = hargawisata[position]
         holder.tvKategori.text = kategoriwisata[position]
+        holder.image.setImageResource(R.drawable.tamansari)
 
 
         holder.itemView.setOnClickListener {
@@ -72,6 +73,7 @@ class AdapterWisata internal constructor(
                 putExtra("tvAlamat", alamatwisata[position])
                 putExtra("tvHarga", hargawisata[position])
                 putExtra("tvKategori", kategoriwisata[position])
+                putExtra("deskripsi", deskripsiwisata[position])
                 putExtra("iduser", iduser)
 
 
